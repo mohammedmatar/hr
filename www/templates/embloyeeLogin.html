@@ -1,0 +1,19 @@
+<ion-view title="Embloyee Login">
+    <ion-content overflow-scroll="true" padding="true" class="has-header">
+        <form class="list">
+            <ion-list>
+                <label class="item item-input">
+                    <span class="input-label">User Code</span>
+                    <input type="number" placeholder="" ng-model = "user.code">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Password</span>
+                    <input type="password" placeholder="" ng-model = "user.password">
+                </label>
+            </ion-list>
+            <div class="spacer" style="height: 40px;"></div>
+            <a  class="button button-stable button-block " ng-click = "checkLogin(user)">Log in</a>
+        </form>
+    </ion-content>
+</ion-view>
+<!-- ui-sref="tabsController.vacations" -->

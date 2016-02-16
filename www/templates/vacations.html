@@ -1,0 +1,47 @@
+<ion-view title="Vacations">
+    <ion-content overflow-scroll="true" padding="true" class="has-header">
+        <!-- <form class="list"></form> -->
+        <!-- <form class="list"></form> -->
+        <!-- <form class="list"></form> -->
+        <form class="list">
+            <label class="item item-select" name="vac-type">
+                <span class="input-label">Type</span>
+                <select ng-model="req.type" ng-change="showSelectValue(req.type)">
+                    <option value="Unpaid Vacation">Unpaid Vacation</option>
+                    <option value="Haj Vacation">Haj Vacation</option>
+                    <option value="Marriage Vacation">Marriage Vacation</option>
+                    <option value="Yearly Vacation">Yearly Vacation</option>
+                    <option value="Casual Vacation">Casual Vacation</option>
+                    <option value="Funeral Leave">Funeral Leave</option>
+                    <option value="Sickness Vacation">Sickness Vacation</option>
+                    <option value="Birth Vacation">Birth Vacation</option>
+                </select>
+            </label>
+        
+        <!-- <form class="list"> -->
+            <label class="item item-input" name="vac-number-of-dayes">
+                <span class="input-label">Number of dayes</span>
+                <input type="number" placeholder="0" ng-model="req.nod">
+            </label>
+        <!-- </form> -->
+        <!-- <form class="list"> -->
+            <label class="item item-input" name="vac-end-date">
+                <span class="input-label">End date</span>
+                <input type="date" placeholder="" ng-model="req.edate">
+            </label>
+            <label class="item item-input" name="vac-starting-date">
+                <span class="input-label">Starting date</span>
+                <input type="date" placeholder="" ng-model="req.sdate">
+            </label>
+            <label class="item item-input" name="vac-work-starting">
+                <span class="input-label">Work date</span>
+                <input type="date" placeholder="" ng-model="req.wdate">
+            </label>
+            <label class="item item-input" name="vac-comments">
+                <span class="input-label">Comments</span><textarea placeholder="" ng-model="req.comments"> </textarea>
+            </label>
+        <!-- </form> -->
+        <button class="button button-royal button-block  icon-right ion-android-send" ng-click="sendVacationsRequest(req)">Send Request</button>
+        </form>
+    </ion-content>
+</ion-view>

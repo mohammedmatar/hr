@@ -1,0 +1,33 @@
+<ion-view title="Advances">
+    <ion-content overflow-scroll="true" padding="true" class="has-header">
+        <form class="list" ng-submit="">
+            <label class="item item-select" name="adv-type">
+                <span class="input-label">Type</span>
+                <select ng-model="req.type" ng-change="showSelectValue(req.type)">
+                    <option value="Charity">Charity</option>
+                    <option value="Salary Advance">Salary Advance</option>
+                </select>
+            </label>
+            <label class="item item-input" name="adv-amount">
+                <span class="input-label">Amount</span>
+                <input type="number" placeholder="0"  ng-model="req.amount">
+            </label>
+            <label class="item item-input" name="adv-premium-start">
+                <span class="input-label">Premium start</span>
+                <input type="date" placeholder="" ng-model="req.pstart">
+            </label>
+            <label class="item item-input" name="adv-premiums-number">
+                <span class="input-label">Premium Number</span>
+                <input type="number" placeholder="1" ng-model="req.pnumber">
+            </label>
+            <label class="item item-input" name="adv-premium-end">
+                <span class="input-label">Premium end</span>
+                <input type="date" placeholder="" ng-model="req.pend">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Comments</span><textarea placeholder="" ng-model="req.comments"> </textarea>
+            </label>
+        </form>
+        <button class="button button-royal button-block  icon-right ion-android-send" ng-click="sendAdvancesRequest(req)" >Send Request</button>
+    </ion-content>
+</ion-view>
