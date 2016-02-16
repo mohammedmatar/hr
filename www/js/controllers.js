@@ -81,6 +81,7 @@ angular.module('app.controllers', [])
 			 	// console.log('u.toJSON().password = '+u.toJSON().password);
 			 	// console.log('$scope.password = '+user.password);
 			 	if( u.toJSON().code === user.code && u.toJSON().password === user.password){
+			 		alert('good');
 			 		localStorage.setItem("empId", user.code);$state.go('tabsController.vacations');throw BreakException;
 			 	}
 			 }); 
