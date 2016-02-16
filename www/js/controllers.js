@@ -67,7 +67,7 @@ angular.module('app.controllers', [])
 	$scope.checkLogin = function(user) {
 		// body...
 		alert('good1');
-		var u     = users();
+	//	var u     = users();
 		users.$promise.then(function(data) {
 			alert('good before promise');
 			// for(d in data){
