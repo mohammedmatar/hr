@@ -51,7 +51,7 @@ angular.module('app.controllers', [])
 .controller('loginCtrl', function($scope, $state) {
 	$scope.login = function (u) {
 		// body...
-		if(u.code === '123456' && u.password === '123456'){
+		if(u.code === '1' && u.password === '1'){
 			$state.go('embloyeeLogin');
 		}else{
 			alert('Sorry you can\'t login ');
