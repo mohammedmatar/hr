@@ -66,27 +66,32 @@ angular.module('app.controllers', [])
 	var users = UsersService.query();	
 	$scope.checkLogin = function(user) {
 		// body...
-
-		// var u     = users();
+		alert('good1');
+		var u     = users();
 		users.$promise.then(function(data) {
+			alert('good before promise');
 			// for(d in data){
-			// 	console.log(d);
+				// console.log(d);
 			// }
 			var BreakException= {};
 			try {
+
 			 data.forEach(function (u) {
+			 	alert('goodinto forEach');
 			 	// console.log('u.toJSON().code = '+u.toJSON().code);
 			 	// console.log('$scope.code = '+user.code);
 
 			 	// console.log('u.toJSON().password = '+u.toJSON().password);
 			 	// console.log('$scope.password = '+user.password);
 			 	if( u.toJSON().code === user.code && u.toJSON().password === user.password){
-			 		alert('good');
-			 		localStorage.setItem("empId", user.code);$state.go('tabsController.vacations');throw BreakException;
+			 		
+			 		localStorage.setItem("empId", user.code);
+			 		$state.go('tabsController.vacations');
+			 		throw BreakException;
 			 	}
 			 }); 
 			 alert('Your ID \ Password incorrect !');
-			 
+			 /**/
 			 } catch(e) {
     			if (e!==BreakException) throw e;
 			 }
